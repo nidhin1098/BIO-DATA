@@ -1,0 +1,132 @@
+:root {
+  --white: #ffffff;
+  --red: #e53935;
+  --black: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--white);
+  color: var(--black);
+  scroll-behavior: smooth;
+}
+
+header {
+  background: var(--white);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: var(--black);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover, nav a.active {
+  color: var(--red);
+}
+
+.section {
+  padding: 80px 40px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--red);
+  text-align: center;
+}
+
+.hero {
+  text-align: center;
+  padding: 200px 40px;
+}
+
+.hero h2 {
+  font-size: 8rem;
+  margin-bottom: 20px;
+  color: var(--red);
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  color: var(--black);
+}
+
+ul {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+ul li {
+  line-height: 1.6;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+.contact-info a {
+  color: var(--black);
+  transition: color 0.3s;
+}
+
+.contact-info a:hover {
+  color: var(--red);
+}
+
+footer {
+  background: var(--white);
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--black);
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
